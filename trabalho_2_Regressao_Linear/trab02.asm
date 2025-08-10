@@ -61,7 +61,7 @@ leitura_loop:
     mov esi, 128
     mov rdx, [rbp-8]
     call fgets
-    test rax, rax
+    cmp rax, 0
     je fim_leitura
 
     ; Extrair valores x e y
@@ -153,7 +153,7 @@ fim_leitura:
     lea rdi, [rel nome_resultado]
     lea rsi, [rel modo_leitura]
     call fopen
-    test rax, rax
+    cmp rax, 0
     je contador_zero
     mov r13, rax
     mov dword [contador_execucao], 0
@@ -164,7 +164,7 @@ contador_loop:
     mov esi, 128
     mov rdx, r13
     call fgets
-    test rax, rax
+    cmp rax, 0
     je contador_fim
 
     ; Verificar se a linha começa com "Execucao"
@@ -172,7 +172,7 @@ contador_loop:
     lea rsi, [rel execucao_prefixo]
     mov rdx, 8              ; Comprimento de "Execucao"
     call strncmp
-    test eax, eax
+    cmp eax, 0
     jne contador_next_line
 
     ; Extrair número da execução
