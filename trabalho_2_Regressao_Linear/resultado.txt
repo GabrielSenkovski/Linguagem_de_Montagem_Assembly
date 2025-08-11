@@ -3,18 +3,3 @@ Execucao 1
 coeficiente a = 2.040000
 coeficiente b = -0.040000
 ===============
-Execucao 2
-===============
-coeficiente a = 2.040000
-coeficiente b = -0.040000
-===============
-Execucao 3
-===============
-coeficiente a = 2.040000
-coeficiente b = -0.040000
-===============
-Execucao 4
-===============
-coeficiente a = 2.040000
-coeficiente b = -0.040000
-===============
